@@ -2,6 +2,13 @@
 * {
   box-sizing: border-box;
 }
+#logo{
+	
+font-family:Helvetica;
+font-style:bold;
+font-size:20px;
+text-shadow: 3px 3px 10px red;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -10,11 +17,13 @@ body {
 
 header {
   background-color: #666;
-  padding: 30px;
+  padding: 25px;
   text-align: center;
   font-size: 35px;
   color: white;
-  
+  font-family:Arial black;
+font-style:bold;
+
 }
 
 
@@ -22,8 +31,9 @@ header {
 nav {
   float: left;
   width: 20%;
+  padding-top:0px;
  /* background:#F4F6F6 ;*/
-  padding: 2px;
+
   
 }
 
@@ -31,6 +41,7 @@ nav {
 nav ul {
   list-style-type: none;
   padding-left:10px;
+ 
   color: black ;
 background-color:#F4D03F  ;  /*ul heading color*/
 }/* contents navigation bar*/
