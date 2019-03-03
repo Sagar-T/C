@@ -100,7 +100,7 @@ footer {
 
 /*772 the calculated width*/
 
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: 772px)
 {
 	body,nav, article{
 		
