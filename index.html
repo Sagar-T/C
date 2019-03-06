@@ -8,10 +8,90 @@
     <meta name="author" content=" http://sagar-t.github.io/C.com">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>C TUTORIAL</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/LAYOUTSTYLE.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/LAYOUTSTYLE.css" rel="stylesheet">
+	
+	  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow|Open+Sans:300" >
+        <link rel="stylesheet" href="assets/css/styles.css" >
+<!--        
+<script type="text/javascript">
+var now = new Date();
+var hours = now.getSeconds();
 
-  </head>
+//Keep in code - Written by Computerhope.com
+//Place this script in your HTML heading section
+
+document.write('It\'s now: ', hours, '<br><br>');
+document.bgColor="#CC9900";
+
+//18-19 night
+if (hours > 5 && hours < 10){
+ document.write ('<body style="background-color: orange">');
+}
+//20-21 night
+else if (hours > 10 && hours < 20){
+ document.write ('<body style="background-color: orangered">');
+}
+//22-4 night
+else if (hours > 20 || hours < 30){
+ document.write ('<body style="background-color: #C0C0C0;">');
+}
+//9-17 day
+else if (hours > 8 && hours < 18){
+ document.write ('<body style="background-color: #616D7E">');
+}
+//7-8 day
+else if (hours > 6 && hours < 9){
+ document.write ('<body style="background-color: skyblue">');
+}
+//5-6 day
+else if (hours > 4 && hours < 7){
+ document.write ('<body style="background-color: steelblue">');
+}
+else {
+ document.write ('<body style="background-color: white">');
+}-->
+<script type="text/javascript">
+//
+// Description: Randomly change background color every 5 seconds
+//
+// NewcWare 1997
+// Author: Scott Newcomer 3/1997
+// Email: nuke@bright.net
+//
+function setbackground()
+{
+window.setTimeout( "setbackground()", 5000); // 5000 milliseconds delay
+
+var index = Math.round(Math.random() * 9);
+
+var ColorValue = "FFFFFF"; // default color - white (index = 0)
+
+if(index == 1)
+ColorValue = "FFCCCC"; //peach
+if(index == 2)
+ColorValue = "CCAFFF"; //violet
+if(index == 3)
+ColorValue = "A6BEFF"; //lt blue
+if(index == 4)
+ColorValue = "99FFFF"; //cyan
+if(index == 5)
+ ColorValue = "D5CCBB"; //tan
+if(index == 6)
+ColorValue = "99FF99"; //lt green
+if(index == 7)
+ColorValue = "FFFF99"; //lt yellow
+if(index == 8)
+ColorValue = "FFCC99"; //lt orange
+if(index == 9)
+ColorValue = "CCCCCC"; //lt grey
+
+document.getElementsByTagName("body")[0].style.backgroundColor = "#" + ColorValue;
+
+}
+</script>
+<!--<body onload="setbackground();">-->
+</head>
 <body style="background-color:#f1f1f1;">
   
     <!-- Fixed navbar -->
@@ -50,6 +130,47 @@
       </div>
     </div>
 	
+	<!-- Here is the code for the home page-->
+
+
+	
+		<div id="impress" class="impress-not-supported">
+			
+			<div id="intro" class="step" data-x="0" data-y="0">
+		        <h2>LEARN C PROGRAMMING</h2>
+		        <img src="images/bubbleboy.gif" width="470" height="350" alt="#" />
+		    </div>
+		    
+		   
+		    
+		    <div id="inspire" class="step" data-x="-300" data-y="600" data-scale="0.2" data-rotate="270">
+		        <h2>PRESERVERANCE IS THE KEY</h2>
+		       <p>You are one step closer to acquire or polish your skill in C language. </p>
+	
+		    </div>
+			 <div id="simplicity" class="step" data-x="1300" data-y="-500" data-scale="1.8" data-rotate="90">
+		        <h3>AN EXPERT IN C WAS ONCE A BEGINNER</h3></br></br>
+		        <p>In 1990 International Standard Organization also accepted C language as a standard programming language so it was also known as C-99.</p>
+		     <!--  <img src="images/cimages.png" width="200" height="200" align="center" alt="C Image" />-->
+		    </br></div>
+		    
+			<div id="placement" class="step" data-x="-800" data-y="1100" data-scale="0.8" data-rotate="270">
+		        <h2>Placements Q&A will be added soon.</h2>
+		        <p>THIS SITE IS UNDER CONSTRUCTION. WILL BE BACK WITH LOT OF FEATURES. </p>
+		      <!--<img src="#" width="570" height="389" alt="#" />-->
+		    </div>
+			 <div id="fact1" class="step" data-x="450" data-y="1000" data-rotate="180">
+		        <h2>C is the only language that exists for the longest period of time in the computer programming history.</h2>
+		   
+		    </div>
+		    
+		</div>
+
+		<a id="arrowLeft" class="arrow">&lt;</a>
+		<a id="arrowRight" class="arrow">&gt;</a>
+ </div>
+  
+	
 	
 	
 	
@@ -58,12 +179,18 @@
   <div class="container">
   <div class="navbar-text pull-left">
   <p style="font-size:30px">&copy; C Tutorial 2019</p>
-  </div>
+ 
+  
 </footer>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	     <!-- JavaScript includes -->
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="assets/js/impress.js"></script>
+		<script src="assets/js/script.js"></script>
+
   </body>
 </html>
