@@ -156,17 +156,17 @@ section, footer{
 -----------------------------*/
 
 
-#impress #simplicity{
+#impress #inspire{
 	width: 675px;
 }
 
-#simplicity h2{
+#inspire h2{
 	left: 0;
 	top: 135px;
 	width: 400px;
 }
 
-#simplicity p{
+#inspire p{
 	left: 50px;
     text-align: justify;
     text-indent: 16px;
@@ -174,29 +174,28 @@ section, footer{
     width: 365px;
 }
 
-#simplicity img{
+#inspire img{
 	right: 0;
     top: 30px;
 }
 
 
 /*----------------------------
-	Slide 3 - Connect
+	Slide 3 - fact1
 -----------------------------*/
 
 
-#impress #connect{
+#impress #fact1{
 	width: 560px;
 }
 
-#connect h2{
+#simplicity h2{
 	left: 0;
 	top: 370px;
 	width: 100%;
 	text-align:center;
 }
-
-#connect p{
+#simplicity p{
 	left:50%;
 	margin-left:-245px;
     text-align: left;
@@ -204,56 +203,56 @@ section, footer{
     width: 490px;
 }
 
-#connect img{
+#simplicity img{
 	right: 0;
     top: 50px;
 }
 
 
 /*----------------------------
-	Slide 4 - Upload
+	Slide 4 - placement
 -----------------------------*/
 
 
-#impress #upload{
+#impress #placement{
 	width: 620px;
 }
 
-#upload h2{
+#placement h2{
 	left: 0;
     text-align: left;
     top: 170px;
 }
 
-#upload p{
+#placement p{
 	left: 32px;
     top: 255px;
     width: 280px;
 }
 
-#upload img{
+#placement img{
 	right: 0;
     top: 30px;
 }
 
 
 /*----------------------------
-	Slide 5 - Music
+	Slide 5 - fact1
 -----------------------------*/
 
 
-#impress #music{
+#impress #fact1{
 	width: 690px;
 }
 
-#music h2{
+#fact1 h2{
 	left: 0;
     text-align: center;
     top: 10px;
     width: 100%;
 }
 
-#music p{
+#fact1 p{
 	font-size: 15px;
     left: 45px;
     text-indent: 15px;
@@ -261,7 +260,7 @@ section, footer{
     width: 402px;
 }
 
-#music img{
+#fact1 img{
 	right: 0;
     top: 200px;
 }
@@ -300,22 +299,4 @@ footer h2 i{
 	color:#888;
 }
 
-footer a.tzine,a.tzine:visited{
-	color: #999999;
-	font-size: 12px;
-	left: 50%;
-	margin: 16px 0 0 110px;
-	position: absolute;
-	text-decoration: none;
-	top: 0;
-}
 
-footer a i{
-	color:#ccc;
-	font-style: normal;
-}
-
-footer a i b{
-	color:#c92020;
-	font-weight: normal;
-}
