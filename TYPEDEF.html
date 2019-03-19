@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="C TUTORIAL">
+    <meta name="author" content=" http://sagar-t.github.io/C.com">
+    <title>C TUTORIAL</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/LAYOUTSTYLE.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" id="logo">C TUTORIAL</a>
+        </div>
+		
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>       
+            <li><a href="#about">BASIC CONCEPTS</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+             	<!--<li class="dropdown-header">BASIC CONCEPTS</li>-->
+                <li><a href="BASICCONTENTS.html" >BASIC OF C LANGUAGE</a></li>
+                <li class="active"><a href="ARRAYFANDSTRUCT.html" >ARRAY, FUNCTIONS AND STRUCTURE</a></li>
+				 <li><a href="ADVANCEDCONCEPTS.html" >ADVANCED CONCEPTS</a></li>
+                <li class="divider"></li>
+              <!-- <li class="dropdown-header"></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>-->
+              </ul>
+            </li>            
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div></br></br>
+	<header>
+  <h2 >ARRAY, FUNCTIONS AND STRUCTURE</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <!--<li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>-->
+<div class="card card-light">
+<p class="card-heading font-20 roboto"><b>ARRAY, FUNCTIONS AND STRUCTURE</b></p>
+<ul id="counter-list">
+<li><a href="ARRAYFANDSTRUCT.html" >Arrays</a></li>
+<li><a href="STRINGSANDCHAR.html" >String amd Character Array</a></li>
+<li><a href="STORAGECLASSES.html">Storage Classes</a></li>
+<li><a href="FUNCTIONSINC.html">Introduction to Functions</a></li>
+<li><a href="TYPEOFFUNC.html" >Types of Functions and Recursion</a></li>
+<li><a href="TYPEOFFUNCCALLS.html" >Types of Function calls</a></li>
+<li><a href="PASSINGARRAYTOFUNC.html">Passing Array to Function</a></li>
+<li><a href="STRUCTURESINC.html"> All about Structures</a></li>
+<li><a href="#" id="selected">Typedef</a></li>
+<li><a href="UNIONSINC.html">Unions</a></li>
+</div>
+    </ul>
+  </nav>
+  
+  <article>
+<h3>typedef in C</h3>
+<p>
+<code>typedef</code> is a keyword used in C language to assign alternative names to existing datatypes. Its mostly used with user defined datatypes, when names of the datatypes become slightly complicated to use in programs. Following is the general syntax for using <code>typedef</code>,</p>
+<pre class="c"><code class="language-clike">typedef &lt;existing_name&gt; &lt;alias_name&gt;</code></pre>
+<p>Lets take an example and see how <code>typedef</code> actually works.</p>
+<pre class="c"><code class="language-clike">typedef unsigned long ulong;</code></pre>
+<p>The above statement define a term <code>ulong</code> for an <code>unsigned long</code> datatype. Now this <code>ulong</code> identifier can be used to define <code>unsigned long</code> type variables.</p>
+<pre class="c"><code class="language-clike">ulong i, j;</code></pre>
+<hr />
+<h3>Application of typedef</h3>
+<p><code>typedef</code> can be used to give a name to user defined data type as well. Lets see its use with structures.</p>
+<pre class="c"><code class="language-clike">
+typedef struct
+{
+    type member1;
+    type member2;
+    type member3;
+} type_name;</code></pre>
+<p>Here <b>type_name</b> represents the stucture definition associated with it. Now this <b>type_name</b> can be used to declare a variable of this stucture type.</p>
+<pre class="c"><code class="language-clike">type_name t1, t2;</code></pre>
+<hr />
+<h4>Example of Structure definition using typedef</h4>
+<pre class="c"><code class="language-clike">#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+ 
+typedef struct employee
+{
+    char name[50];
+    int salary;
+}emp;
+ 
+void main( )
+{
+    emp e1;
+    printf("\nEnter Employee record:\n");
+    printf("\nEmployee name:\t");
+    scanf("%s", e1.name);
+    printf("\nEnter Employee salary: \t");
+    scanf("%d", &e1.salary);
+    printf("\nstudent name is %s", e1.name);
+    printf("\nroll is %d", e1.salary);
+}</code></pre>
+<hr />
+<h3><code>typedef</code> and Pointers</h3>
+<p><code>typedef</code> can be used to give an alias name to pointers also. Here we have a case in which use of <code>typedef</code> is beneficial during pointer declaration.</p>
+<p>In Pointers <code>*</code> binds to the right and not on the left.</p>
+<pre class="c"><code class="language-clike">int* x, y;</code></pre>
+<p>By this declaration statement, we are actually declaring <code>x</code> as a pointer of type <code>int</code>, whereas <code>y</code> will be declared as a plain <code>int</code> variable.</p>
+<pre class="c"><code class="language-clike">typedef int* IntPtr;
+IntPtr x, y, z;</code></pre>
+<p>But if we use <code>typedef</code> like we have used in the example above, we can declare any number of pointers in a single statement.</p>
+<p><b>NOTE:</b> If you do not have any prior knowledge of pointers, do study Pointers first.</p>
+<hr />
+<div><ul class="pager">
+<li class="previous">
+<a href="STRUCTURESINC.html">&larr; Prev</a>
+</li>
+<li class="next">
+<a href="UNIONSINC.hmtl">Next &rarr;</a>
+</li>
+</ul></div><hr />
+
+</article>
+</section><!-- important for alignment-->
+	
+
+
+	<footer>
+  <div class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container">
+  <div class="navbar-text pull-left">
+  <p style="font-size:30px">&copy; C Tutorial 2019</p>
+ 
+  
+</footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+  </body>

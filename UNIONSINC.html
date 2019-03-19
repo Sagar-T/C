@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="C TUTORIAL">
+    <meta name="author" content=" http://sagar-t.github.io/C.com">
+    <title>C TUTORIAL</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/LAYOUTSTYLE.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" id="logo">C TUTORIAL</a>
+        </div>
+		
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>       
+            <li><a href="#about">BASIC CONCEPTS</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+             	<!--<li class="dropdown-header">BASIC CONCEPTS</li>-->
+                <li><a href="BASICCONTENTS.html" >BASIC OF C LANGUAGE</a></li>
+                <li class="active"><a href="ARRAYFANDSTRUCT.html" >ARRAY, FUNCTIONS AND STRUCTURE</a></li>
+				 <li><a href="ADVANCEDCONCEPTS.html" >ADVANCED CONCEPTS</a></li>
+                <li class="divider"></li>
+              <!-- <li class="dropdown-header"></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>-->
+              </ul>
+            </li>            
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div></br></br>
+	<header>
+  <h2 >ARRAY, FUNCTIONS AND STRUCTURE</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <!--<li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>-->
+<div class="card card-light">
+<p class="card-heading font-20 roboto"><b>ARRAY, FUNCTIONS AND STRUCTURE</b></p>
+<ul id="counter-list">
+<li><a href="ARRAYFANDSTRUCT.html" >Arrays</a></li>
+<li><a href="STRINGSANDCHAR.html" >String amd Character Array</a></li>
+<li><a href="STORAGECLASSES.html">Storage Classes</a></li>
+<li><a href="FUNCTIONSINC.html">Introduction to Functions</a></li>
+<li><a href="TYPEOFFUNC.html" >Types of Functions and Recursion</a></li>
+<li><a href="TYPEOFFUNCCALLS.html" >Types of Function calls</a></li>
+<li><a href="PASSINGARRAYTOFUNC.html">Passing Array to Function</a></li>
+<li><a href="STRUCTURESINC.html"> All about Structures</a></li>
+<li><a href="TYPEDEF.html">Typedef</a></li>
+<li><a href="#" id="selected">Unions</a></li>
+</div>
+    </ul>
+  </nav>
+  
+  <article>
+<h2>Unions in C Language</h2>
+<p><b>Unions</b> are conceptually similar to <b>structures</b>. The syntax to declare/define a union is also similar to that of a structure. The only differences is in terms of storage. In <b>structure</b> each member has its own storage location, whereas all members of <b>union</b> uses a single shared memory location which is equal to the size of its largest data member.</p>
+<p class="center"><img src="images/union-and-structure-storage-comparison.gif" alt="Union and Structure comparison C language"></p>
+<p>This implies that although a <b>union</b> may contain many members of different types, <b>it cannot handle all the members at the same time</b>. A <b>union</b> is declared using the <code>union</code> keyword.</p>
+<pre class="c"><code class="language-clike">union item
+{
+    int m;
+    float x;
+    char c;
+}It1;</code></pre>
+<p>This declares a variable <code>It1</code> of type <code>union item</code>. This <code>union</code> contains three members each with a different data type. However only one of them can be used at a time. This is due to the fact that only one location is allocated for all the <code>union</code> variables, irrespective of their size. The compiler allocates the storage that is large enough to hold the largest variable type in the union.</p>
+<p>In the union declared above the member <code>x</code> requires <b>4 bytes</b> which is largest amongst the members for a 16-bit machine. Other members of union will share the same memory address.</p>
+<hr />
+<h3>Accessing a Union Member</h3>
+<p>Syntax for accessing any <code>union</code> member is similar to accessing structure members,</p>
+<pre class="c"><code class="language-clike">union test
+{
+    int a;
+    float b;
+    char c;
+}t;
+
+t.a;    //to access members of union t
+t.b;     
+t.c;</code></pre>
+<hr />
+<h3>Time for an Example</h3>
+<pre class="c"><code class="language-clike">
+#include &lt;stdio.h&gt;
+
+union item
+{
+    int a;
+    float b;
+    char ch;
+};
+
+int main( )
+{
+    union item it;
+    it.a = 12;
+    it.b = 20.2;
+    it.ch = 'z';
+    
+    printf("%d\n", it.a);
+    printf("%f\n", it.b);
+    printf("%c\n", it.ch);
+    
+    return 0;
+}</code></pre>
+<p class="output">
+-26426
+20.1999
+z
+</p>
+<p>As you can see here, the values of <code>a</code> and <code>b</code> get corrupted and only variable <code>c</code> prints the expected result. This is because in union, the memory is shared among different data types. Hence, the only member whose value is currently stored will have the memory.
+</p>
+<p>In the above example, value of the variable <code>c</code> was stored at last, hence the value of other variables is lost.</p>
+<hr />
+<div><ul class="pager">
+<li class="previous">
+<a href="TYPEDEF.html">&larr; Prev</a>
+</li>
+
+</ul></div><hr />
+
+</article>
+</section><!-- important for alignment-->
+	
+
+
+	<footer>
+  <div class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container">
+  <div class="navbar-text pull-left">
+  <p style="font-size:30px">&copy; C Tutorial 2019</p>
+ 
+  
+</footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+  </body>
