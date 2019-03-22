@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="description" content="C TUTORIAL">
+    <meta name="author" content=" http://sagar-t.github.io/C.com">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>C TUTORIAL</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/LAYOUTSTYLE.css" rel="stylesheet">
+	
+	  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow|Open+Sans:300" >
+      
+
+</head>
+<body style="background-color:#f1f1f1;">
+  
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" id="logo">C TUTORIAL</a>
+        </div>
+		
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li > <a href="index.html">Home</a></li>       
+            <li ><a href="#about">BASIC CONCEPTS</a></li>
+            <li class="dropdown">
+              <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+             	<!--<li class="dropdown-header">BASIC CONCEPTS</li>-->
+                <li class="active"><a href="BASICCONTENTS.html">BASIC OF C LANGUAGE</a></li>
+                <li><a href="ARRAYFANDSTRUCT.html">ARRAY, FUNCTIONS AND STRUCTURE</a></li>
+				 <li><a href="ADVANCEDCONCEPTS.html">ADVANCED CONCEPTS</a></li>
+                <li class="divider"></li>
+               <!-- <li class="dropdown-header">Portfolio</li>
+                <li><a href="#">Portfolio 1</a></li>
+                <li><a href="#">Portfolio 2</a></li>-->
+              </ul>
+            </li>            
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div></br></br>
+	<header>
+  <h2>BASICS OF C LANGUAGE</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <!--<li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>-->
+	  <div class="card card-light">
+<p class="card-heading font-20 roboto"><b>Basics of C Language</b></p>
+<ul id="counter-list">
+<li><a href="BASICCONTENTS.html" >Features of C</a></li>
+<li><a href="CSYNTAXRULES.html">C Syntax Rules</a></li>
+<li><a href="#" id="selected">Keywords and Identifier</a></li>
+<li><a href="OPERATORSINC.html">Operators in C Language</a></li>
+<li><a href="DATATYPESINC.html">Data Types in C</a></li>
+<li><a href="VARIABLESINC.html">Variables in C</a></li>
+<li><a href="CIO.html">C Input / Output</a></li>
+<li><a href="DECISIONMAKING.html" >Decision Making</a></li>
+<li><a href="SWITHCD.html">Switch Statement</a></li>
+<li><a href="LOOPING.html">Looping</a></li>
+</ul>
+</div>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>KEYWORDS AND IDENTIFIERS</h1>
+<p>Keywords are preserved words that have special meaning in C language. The meaning of C language keywords has already been described to the C compiler. These meaning cannot be changed. Thus, keywords cannot be used as variable names because that would try to change the existing meaning of the keyword, which is not allowed.(Don't worry if you do not know what variables are, you will soon understand.) There are total 32 keywords in C language. </p>
+<table class="table table-bordered table-striped">
+<tr><td>auto</td><td>double</td><td>int</td><td>struct</td></tr>
+<tr><td>break</td><td>else</td><td>long</td><td>switch</td></tr>
+<tr><td>case</td><td>enum</td><td>register</td><td>typedef</td></tr>
+<tr><td>const</td><td>extern</td><td>return</td><td>union</td></tr>
+<tr><td>char</td><td>float</td><td>short</td><td>unsigned</td></tr>
+<tr><td>continue</td><td>for</td><td>signed</td><td>volatile</td></tr>
+<tr><td>default</td><td>goto</td><td>sizeof</td><td>void</td></tr>
+<tr><td>do</td><td>if</td><td>static</td><td>while</td></tr>
+</table>
+<hr />
+<h2>What are Identifiers?</h2>
+<p>
+In C language identifiers are the names given to variables, constants, functions and user-define data. These identifier are defined against a set of rules.
+</p>
+<hr />
+<h4>Rules for an Identifier</h4>
+<ol class="content">
+<li>An Identifier can only have alphanumeric characters(a-z , A-Z , 0-9) and underscore(<code>_</code>).</li>
+<li>The first character of an identifier can only contain alphabet(a-z , A-Z) or underscore (<code>_</code>).</li>
+<li>Identifiers are also case sensitive in C. For example <b>name</b> and <b>Name</b> are two different identifiers in C.</li>
+<li>Keywords are not allowed to be used as Identifiers.</li>
+<li>No special characters, such as semicolon, period, whitespaces, slash or comma are permitted to be used in or as Identifier.</li>
+</ol>
+<br />
+<p>When we declare a variable or any function in C language program, to use it we must provide a name to it, which identified it throughout the program, for example:</p>
+<pre class="c"><code class="language-clike">int myvariable = "Studytonight";</code></pre>
+<p>Here <code>myvariable</code> is the name or identifier for the variable which stores the value "Studytonight" in it.</p>
+<hr />
+<h4>Character set</h4>
+<p>
+In C language characters are grouped into the following catagories,</p>
+<ol class="content">
+<li>Letters(all alphabets a to z & A to Z).</li>
+<li>Digits (all digits 0 to 9).</li>
+<li>Special characters, ( such as colon <code>:</code>, semicolon <code>;</code>, period <code>.</code>, underscore <code>_</code>, ampersand <code>&</code> etc).</li>
+<li>White spaces.</li>
+</ol>
+<br />
+<!--<p class="center videoWrapper"><iframe src="https://www.youtube.com/embed/f1D_E1KU0N0?rel=0&amp;showinfo=0&amp;ecver=1" width="640" height="340" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></p>-->
+<hr />
+<div><ul class="pager">
+<li class="previous">
+<a href="CSYNTAXRULES.html">&larr; Prev</a>
+</li>
+<li class="next">
+<a href="OPERATORSINC.html">Next &rarr;</a>
+</li>
+</ul></div>
+<hr />
+ </article>
+</section><!-- important for alignment-->
+	
+
+
+	<footer>
+  <div class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container">
+  <div class="navbar-text pull-left">
+  <p style="font-size:30px">&copy; C Tutorial 2019</p>
+ 
+  
+</footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

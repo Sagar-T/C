@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="C TUTORIAL">
+    <meta name="author" content=" http://sagar-t.github.io/C.com">
+    <title>C TUTORIAL</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/LAYOUTSTYLE.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" id="logo">C TUTORIAL</a>
+        </div>
+		
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>       
+            <li><a href="#about">BASIC CONCEPTS</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+             	<!--<li class="dropdown-header">BASIC CONCEPTS</li>-->
+                <li><a href="BASICCONTENTS.html" >BASIC OF C LANGUAGE</a></li>
+                <li class="active"><a href="ARRAYFANDSTRUCT.html" >ARRAY, FUNCTIONS AND STRUCTURE</a></li>
+				 <li><a href="ADVANCEDCONCEPTS.html" >ADVANCED CONCEPTS</a></li>
+                <li class="divider"></li>
+              <!-- <li class="dropdown-header"></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>-->
+              </ul>
+            </li>            
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div></br></br>
+	<header>
+  <h2 >ARRAY, FUNCTIONS AND STRUCTURE</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <!--<li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>-->
+<div class="card card-light">
+<p class="card-heading font-20 roboto"><b>ARRAY, FUNCTIONS AND STRUCTURE</b></p>
+<ul id="counter-list">
+<li><a href="#" id="selected">Arrays</a></li>
+<li><a href="STRINGSANDCHAR.html">String amd Character Array</a></li>
+<li><a href="STORAGECLASSES.html" >Storage Classes</a></li>
+<li><a href="FUNCTIONSINC.html" >Introduction to Functions</a></li>
+<li><a href="TYPEOFFUNC.html">Types of Functions and Recursion</a></li>
+<li><a href="TYPEOFFUNCCALLS.html" >Types of Function calls</a></li>
+<li><a href="PASSINGARRAYTOFUNC.html" >Passing Array to Function</a></li>
+<li><a href="STRUCTURESINC.html" >All about Structures</a></li>
+<li><a href="TYPEDEF.html" >Typedef</a></li>
+<li><a href="UNIONSINC.html" >Unions</a></li>
+</div>
+    </ul>
+  </nav>
+  
+  <article>
+<!--<h1 style="margin-left:34px; text-decoration: underline;">ARRAYS</h1>-->
+<p>
+	<ul class="content">
+	<h2>Arrays in C</h2>
+<p>
+In C language, <code>arrays</code> are reffered to as structured data types. An array is defined as <b>finite ordered collection of homogenous</b> data, stored in contiguous memory locations.</p>
+<p>Here the words,</p>
+<ul class="content">
+<li><b>finite</b> <i>means</i> data range must be defined.</li>
+<li><b>ordered</b> <i>means</i> data must be stored in continuous memory addresses.</li>
+<li><b>homogenous</b> <i>means</i> data must be of similar data type.</li>
+</ul>
+<br />
+<h3>Example where arrays are used,</h3>
+<ul class="content">
+<li>to store list of Employee or Student names,</li>
+<li>to store marks of students,</li>
+<li>or to store list of numbers or characters etc.</li>
+</ul>
+<p>Since arrays provide an easy way to represent data, it is classified amongst the data structures in C. Other data structures in c are <b>structure</b>, <b>lists</b>, <b>queues</b>, <b>trees</b> etc. Array can be used to represent not only simple list of data but also table of data in two or three dimensions.</p>
+<hr />
+<h3>Declaring an Array</h3>
+<p>Like any other variable, arrays must be declared before they are used. General form of array declaration is,</p>
+<pre class="c"><code class="language-clike">data-type variable-name[size];
+
+/* Example of array declaration */
+
+int arr[10];</code></pre>
+<p class="center"><img src="assets/img/array-declaraction-in-c.gif" alt="array declaraction in c" /></p>
+<p>Here <code>int</code> is the data type, <code>arr</code> is the name of the array and 10 is the size of array. It means array <code>arr</code> can only contain 10 elements of <code>int</code> type.</p>
+<p><b>Index</b> of an array starts from <code>0</code> to <b>size-1</b> i.e first element of <code>arr</code> array will be stored at <code>arr[0]</code> address and the last element will occupy <code>arr[9]</code>.</p>
+<hr />
+<h3>Initialization of an Array</h3>
+<p>After an array is declared it must be initialized. Otherwise, it will contain <b>garbage</b> value(any random value). An array can be initialized at either <b>compile time</b> or at <b>runtime</b>.
+</p>
+<br />
+<h4>Compile time Array initialization</h4>
+<p>Compile time initialization of array elements is same as ordinary variable initialization. The general form of initialization of array is,</p>
+<pre class="c"><code class="language-clike">data-type array-name[size] = { list of values };
+
+/* Here are a few examples */
+int marks[4]={ 67, 87, 56, 77 };    // integer array initialization
+
+float area[5]={ 23.4, 6.8, 5.5 };   // float array initialization
+
+int marks[4]={ 67, 87, 56, 77, 59 };    // Compile time error</code></pre>
+<p>One important thing to remember is that when you will give more initializer(array elements) than the declared array size than the <b>compiler</b> will give an error.</p>
+<pre class="c"><code class="language-clike">#include&lt;stdio.h&gt;
+
+void main()
+{
+    int i;
+    int arr[] = {2, 3, 4};      // Compile time array initialization
+    for(i = 0 ; i < 3 ; i++) 
+    {
+        printf("%d\t",arr[i]);
+    }
+}</code></pre>
+<p class="output">
+2 3 4
+</p>
+<br />
+<h4>Runtime Array initialization</h4>
+<p>
+An array can also be initialized at runtime using <code>scanf()</code> function. This approach is usually used for initializing large arrays, or to initialize arrays with user specified values. Example,</p>
+<pre class="c"><code class="language-clike">#include&lt;stdio.h&gt;
+
+void main()
+{
+    int arr[4];
+    int i, j;
+    printf("Enter array element");
+    for(i = 0; i < 4; i++)
+    {
+        scanf("%d", &arr[i]);    //Run time array initialization
+    }
+    for(j = 0; j < 4; j++)
+    {
+        printf("%d\n", arr[j]);
+    }
+}</code></pre>
+<hr />
+<h3>Two dimensional Arrays</h3>
+<p>C language supports multidimensional arrays also. The simplest form of a multidimensional array is the two-dimensional array. Both the row's and column's index begins from <code>0</code>.</p>
+<p>
+Two-dimensional arrays are declared as follows,</p>
+<pre class="c"><code class="language-clike">data-type array-name[row-size][column-size] 
+
+/* Example */
+int a[3][4];</code></pre>
+<p class="center"><img src="assets/img/two-dimensional-array.gif" alt="two dimensional array in c" /></p>
+<p>An array can also be declared and initialized together. For example,</p>
+<pre class="c"><code class="language-clike">int arr[][3] = {
+    {0,0,0},
+    {1,1,1}
+};</code></pre>
+<p><b>Note:</b> We have not assigned any row value to our array in the above example. It means we can initialize any number of rows. But, we must always specify number of columns, else it will give a compile time error. Here, a <code>2*3</code> multi-dimensional matrix is created.</p>
+<br />
+<h4>Runtime initialization of a two dimensional Array</h4>
+<pre class="c"><code class="language-clike">#include&lt;stdio.h&gt;
+
+void main()
+{
+    int arr[3][4];
+    int i, j, k;
+    printf("Enter array element");
+    for(i = 0; i < 3;i++)
+    {
+        for(j = 0; j < 4; j++)
+        {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 4; j++)
+        {
+            printf("%d", arr[i][j]);
+        }
+    }
+}</code></pre>
+<hr />
+<div><ul class="pager">
+<li class="next">
+<a href="STRINGSANDCHAR.html">Next &rarr;</a>
+</li>
+</ul></div>
+<hr />
+	</ul>
+</p>
+   </article>
+</section><!-- important for alignment-->
+
+<footer>
+<!--/.nav-collapse -->
+      
+    </br></br>
+  <div class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container">
+  <div class="navbar-text pull-left">
+  <p style="font-size:30px">&copy; C Tutorial 2019</p>
+  </div> </div> </div>
+</footer>
+<br />
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+ 
+ </body>
+</html>
