@@ -9,6 +9,7 @@
     <title>C TUTORIAL</title>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 		<link href="assets/css/LAYOUTSTYLE.css" rel="stylesheet">
+
   </head>
   <body>
     <!-- Fixed navbar -->
@@ -26,15 +27,15 @@
 		
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li ><a href="index.html">Home</a></li>       
+            <li><a href="index.html">Home</a></li>       
             <li><a href="#about">BASIC CONCEPTS</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
               <ul class="dropdown-menu">
              	<!--<li class="dropdown-header">BASIC CONCEPTS</li>-->
-                <li><a href="BASICCONTENTS.html">BASIC OF C LANGUAGE</a></li>
-                <li><a href="ARRAYFANDSTRUCT.html">ARRAY, FUNCTIONS AND STRUCTURE</a></li>
-				 <li class="active"><a href="ADVANCEDCONCEPTS.html">ADVANCED CONCEPTS</a></li>
+                <li><a href="BASICCONTENTS.html" >BASIC OF C LANGUAGE</a></li>
+                <li class="active"><a href="ARRAYFANDSTRUCT.html" >ARRAY, FUNCTIONS AND STRUCTURE</a></li>
+				 <li><a href="ADVANCEDCONCEPTS.html" >ADVANCED CONCEPTS</a></li>
                 <li class="divider"></li>
               <!-- <li class="dropdown-header"></li>
                 <li><a href="#"></a></li>
@@ -47,7 +48,7 @@
       </div>
     </div></br></br>
 	<header>
-  <h2>ADVANCED CONCEPTS</h2>
+  <h2 >ADVANCED CONCEPTS</h2>
 </header>
 
 <section>
@@ -56,29 +57,27 @@
       <!--<li><a href="#">London</a></li>
       <li><a href="#">Paris</a></li>
       <li><a href="#">Tokyo</a></li>-->
-	  <div class="card card-light">
-<p class="card-heading font-20 roboto" ><b>ADVANCED CONCEPTS</b></p>
+<div class="card card-light">
+<p class="card-heading font-20 roboto"><b>ARRAY, FUNCTIONS AND STRUCTURE</b></p>
 <ul id="counter-list">
-<li><a href="#" id="selected">Introduction to Pointers</li>
-<li><a href="declaring-and-initializing-pointer.html">Declaring and Initializing Pointer</a></li>
-<li><a href="pointer-to-pointer.html">Pointer to Pointer</a></li>
-<li><a href="pointers-with-array.html">Pointer to Array</a></li>
-<li><a href="pointers-to-structure-in-c.html">Pointer to Structure</a></li>
-<li><a href="pointer-arithmetic-in-c.html">Pointer Arithmetic</a></li>
-<li><a href="pointer-with-function-in-c.html">Pointer with Functions</a></li>
-<li><a href="file-input-output.html">File Input/Output</a></li>
-<li><a href="error-handling-in-c.html">Error Handling</a></li>
-<li><a href="dynamic-memory-allocation-in-c.html">Dynamic Memory Allocation</a></li>
-<li><a href="command-line-argument.html">Command Line Argument</a></li>
-
+<li><a href="#" id="selected" >POINTERS</a></li>
+<li><a href="DANDIPOINTERS.html" >DECLARING AND INITIALIZING POINTERS</a></li>
+<li><a href="POINTERTOPOINTER.html">POINTER TO POINTER</a></li>
+<li><a href="POINTERTOARRAY.html">POINTER TO ARRAY</a></li>
+<li><a href="POINTERTOSTRUCT.html" >POINTER TO STRUCTURE</a></li>
+<li><a href="POINTERARITH.html">POINTER ARITHMETIC</a></li>
+<li><a href="POINTERWITHFUNC.html" >POINTER WITH FUNCTION</a></li>
+<li><a href="FILE.html">FILE INPUT/OUTPUT</a></li>
+<li><a href="ERROR HANDLING.html">ERROR HANDLING</a></li>
+<li><a href="DYNAMIC MEMORY ALLOCATION.html">DYNAMIC MEMORY ALLOCATION</a></li>
+<li><a href="COMMANDLINEARGUMENT.html">COMMAND LINE ARGUMENT</a></li>
 </div>
     </ul>
   </nav>
   
   <article>
-<p>
-	<ul class="content">
-	<h2>Pointers</h2>
+
+<h2>Introduction to Pointers</h2>
 <p>A Pointer in C language is a variable which holds the address of another variable of same data type.</p>
 <p>Pointers are used to access memory and manipulate the address.</p>
 <p>Pointers are one of the most distinct and exciting features of C language. It provides power and flexibility to the language. Although pointers may appear a little confusing and complicated in the beginning, but trust me, once you understand the concept, you will be able to do so much more with C language.
@@ -125,31 +124,34 @@ Memory address of the variable var is: bcc7a00
 </ol>
 <p>In the next tutorial we will learn syntax of pointers, how to declare and define a pointer, and using a pointer. See you in the next tutorial.</p>
 <hr />
+
 <div><ul class="pager">
 <li class="next">
-<a href="declaring-and-initializing-pointer.html">Next &rarr;</a>
+<a href="DANDIPOINTERS.html">Next &rarr;</a>
 </li>
 </ul></div>
-<hr />
-	</ul>
-</p>
-   </article>
-</section><!-- important for alignment-->
 
-<footer>
+
+</ul></div><hr />
+
+
+</article>
+</section><!-- important for alignment-->
+	
+
+
+	<footer>
   <div class="navbar navbar-inverse navbar-fixed-bottom">
   <div class="container">
   <div class="navbar-text pull-left">
   <p style="font-size:30px">&copy; C Tutorial 2019</p>
-  </div>
+ 
+  
 </footer>
-
-<br />
-  <!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
- 
- </body>
-</html>
+
+  </body>
