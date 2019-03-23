@@ -1,0 +1,28 @@
+
+.middle
+{
+position:absolute;
+top:25%;
+left:50%;
+transform: translate(-50%);
+width:100%;
+display:flex;
+justify-content:center;
+}
+.text
+{
+color:#fff;
+font-size:100px;
+
+cursor:pointer;
+}
+.hidden
+{
+max-width:0;
+opacity:0;
+transition: 0.5s ease-in;
+}
+.text:hover .hidden{
+opacity:1;
+max-width:1em;
+}
