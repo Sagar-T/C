@@ -1,67 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <meta name="description" content="C TUTORIAL">
-    <meta name="author" content=" http://sagar-t.github.io/C.com">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>C TUTORIAL</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/css/LAYOUTSTYLE.css" rel="stylesheet">
-	
-	  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow|Open+Sans:300" >
-      
+<html>
+<head>
+<meta charset="utf-8">
+	<title>C Tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/color/default.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/main.css">
 
 </head>
-<body style="background-color:#f1f1f1;">
-  
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html" id="logo">C TUTORIAL</a>
-        </div>
-		
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li > <a href="index.html">Home</a></li>       
-            <li ><a href="#about">BASIC CONCEPTS</a></li>
-            <li class="dropdown">
-              <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-             	<!--<li class="dropdown-header">BASIC CONCEPTS</li>-->
-                <li class="active"><a href="BASICCONTENTS.html">BASIC OF C LANGUAGE</a></li>
-                <li><a href="ARRAYFANDSTRUCT.html">ARRAY, FUNCTIONS AND STRUCTURE</a></li>
-				 <li><a href="ADVANCEDCONCEPTS.html">ADVANCED CONCEPTS</a></li>
-                <li class="divider"></li>
-               <!-- <li class="dropdown-header">Portfolio</li>
-                <li><a href="#">Portfolio 1</a></li>
-                <li><a href="#">Portfolio 2</a></li>-->
-              </ul>
-            </li>            
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div></br></br>
-	<header>
-  <h2>BASICS OF C LANGUAGE</h2>
-</header>
-<section>
-  <nav>
-    <ul>
-      <!--<li><a href="#">London</a></li>
-      <li><a href="#">Paris</a></li>
-      <li><a href="#">Tokyo</a></li>-->
-	  <div class="card card-light">
+<body >
+
+<!-- navbar -->
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<!-- Responsive navbar -->
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+					<h1 class="brand"><a href="index.html">C tutorial</a></h1>
+					<!-- navigation -->
+						<!-- navigation -->
+				<nav class="pull-right nav-collapse collapse">
+						<ul id="menu-main" class="nav">
+					
+							<li><a title="Courses" href="CONTENTSSHOW.html">Courses</a></li>
+							<li><a title="blog" href="#blog">Blog</a></li>
+							<li><a title="Login" href="login.html">Login</a></li>
+							<li><a title="Sign up" href="register.html">Sign up</a></li>
+							
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	  
+	  
+	  <div id="mySidenav" class="sidenav" style="display:none;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <!--nav bar contents-->
 <p class="card-heading font-20 roboto"><b>Basics of C Language</b></p>
 <ul id="counter-list">
 <li><a href="BASICCONTENTS.html" >Features of C</a></li>
@@ -76,10 +60,12 @@
 <li><a href="LOOPING.html">Looping</a></li>
 </ul>
 </div>
-    </ul>
-  </nav>
-  <article>
-<h2>Decision making in C</h2>
+
+    	<div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</div>
+  <article class="article">
+<h2 class="heading" >Decision making in C</h2>
 <p>Decision making is about deciding the order of execution of statements based on certain conditions or repeat a group of statements until certain specified conditions are met. C language handles decision-making by supporting the following statements,</p>
 <ul class="content">
 <li><code>if</code> statement</li>
@@ -279,18 +265,13 @@ if(a > 4)
 	
 
 
-	<footer>
-  <div class="navbar navbar-inverse navbar-fixed-bottom">
-  <div class="container">
-  <div class="navbar-text pull-left">
-  <p style="font-size:30px">&copy; C Tutorial 2019</p>
- 
-  
-</footer>
+	
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/main.js"></script>
+	
 
   </body>

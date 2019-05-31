@@ -25,14 +25,16 @@
 				</a>
 					<h1 class="brand"><a href="index.html">C tutorial</a></h1>
 					<!-- navigation -->
-						<!-- navigation -->
-				<nav class="pull-right nav-collapse collapse">
+					<nav class="pull-right nav-collapse collapse">
 						<ul id="menu-main" class="nav">
-					
-							<li><a title="Courses" href="CONTENTSSHOW.html">Courses</a></li>
+							<li><a title="team" href="#about">About</a></li>
+							<li><a title="Courses" href="#services">Courses</a></li>
+							<!--<li><a title="works" href="#works">Works</a></li>
 							<li><a title="blog" href="#blog">Blog</a></li>
-							<li><a title="Login" href="login.html">Login</a></li>
-							<li><a title="Sign up" href="register.html">Sign up</a></li>
+							<li><a href="page.html">Page</a></li>-->
+							<li><a title="contact" href="#contact">Contact</a></li>
+							<li><a title="Login" href="#contact">Login</a></li>
+							<li><a title="Sign up" href="#contact">Sign up</a></li>
 							
 							
 						</ul>
@@ -42,12 +44,12 @@
 		</div>
 	</div>
 	  
-	  <div id="mySidenav" class="sidenav" style="display:none;">
+	  <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 	  <!--nav bar contents-->
 <p class="card-heading font-20 roboto"><b>Basics of C Language</b></p>
 <ul id="counter-list">
-<li><a href="#" id="selected">Features of C</a></li>
+<li><a href="BASICCONTENTS.html" >Features of C</a></li>
 <li><a href="CSYNTAXRULES.html">C Syntax Rules</a></li>
 <li><a href="KEYWORDSANDID.html">Keywords and Identifier</a></li>
 <li><a href="OPERATORSINC.html">Operators in C Language</a></li>
@@ -88,14 +90,13 @@
    
 <script>
 function openNav() {
-document.getElementById("mySidenav").style.display = "block";
   document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "0px";
+  document.getElementById("main").style.marginLeft = "250px";
   document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.display = "none";
+  document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
   document.body.style.backgroundColor = " #f1f1f1";
 }

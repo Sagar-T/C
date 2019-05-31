@@ -1,8 +1,22 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<?php
+session_start();
+error_reporting();
+include("connection.php");
+//echo "WELCOME" .$_SESSION['user_name'];
+$userprofile=$_SESSION['email_id'];
 
+
+if(!isset($_SESSION["email_id"])){
+ header("Location: login.php");
+}
+else
+{
+?>
+
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="utf-8">
+<meta charset="utf-8">
 	<title>C Tutorial</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
@@ -10,13 +24,13 @@
 	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="assets/css/style.css" rel="stylesheet">
 	<link href="assets/color/default.css" rel="stylesheet">
-	<!--<link rel="shortcut icon" href="assets/img/favicon.ico">-->
-	
-	
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/main.css">
 
-<body>
-	<!-- navbar -->
+</head>
+<body >
+
+<!-- navbar -->
 	<div class="navbar-wrapper">
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
@@ -24,16 +38,24 @@
 					<!-- Responsive navbar -->
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</a>
-					<h1 class="brand"><a href="index.html">C Tutorial</a></h1>
+					<h1 class="brand"><a href="index.html">C tutorial</a></h1>
 					<!-- navigation -->
+						<!-- navigation -->
+		
+					
 					<nav class="pull-right nav-collapse collapse">
 						<ul id="menu-main" class="nav">
 							<li><a title="team" href="#about">About</a></li>
 							<li><a title="Courses" href="#services">Courses</a></li>
-							<li><a title="Login" href="">Login</a></li>
-							<!--<li><a title="blog" href="#blog">Blog</a></li>
+							<!--<li><a title="works" href="#works">Works</a></li>
+							<li><a title="blog" href="#blog">Blog</a></li>
 							<li><a href="page.html">Page</a></li>-->
 							<li><a title="contact" href="#contact">Contact</a></li>
+									<li><a title="login" href="login.html">Log in</a></li>
+							<li><a title="register" href="register.html">Sign up</a></li>
+						
+							
+
 							
 						</ul>
 					</nav>
@@ -41,19 +63,12 @@
 			</div>
 		</div>
 	</div>
-
-<!--	<div id="header-wrapper" class="header-slider">-->
-	<header style="padding-top:150px;padding-bottom:15%; background:black;">
-
-		<p style="color:white; font-familyTrebuchet MS;  font-size:300%; text-align:center;">C programming is
-  <span
-     class="txt-rotate"
-     data-period="2000"
-     data-rotate='[ "easy.", "nerdy.", "interesting.", "simple.", "fun!" ]'></span>
-</p>
-	<!--	<header class="clearfix">
+	  
+	<!-- Header area -->
+	<div id="header-wrapper" class="header-slider">
+		<header class="clearfix">
 			<div class="logo">
-				<img src="img/clogo.png" alt="" />
+				<img src="assets/img/logo.png" alt="" />
 			</div>
 			<div class="container">
 				<div class="row">
@@ -62,25 +77,25 @@
 							<ul class="slides">
 								<li>
 									<p class="home-slide-content">
-										<strong>Love </strong>what you do
+									Keep<strong> Learning.</strong> 
 									</p>
 								</li>
 								<li>
 									<p class="home-slide-content">
-										Understand the<strong> concepts</strong>
+										C is<strong> Easy.</strong>
 									</p>
 								</li>
 								<li>
 									<p class="home-slide-content">
-									Experts were a<strong> Beginner</strong>
+										Coding is<strong> fun.</strong>
 									</p>
 								</li>
 							</ul>
 						</div>
-					
+						<!-- end slider -->
 					</div>
 				</div>
-			</div>-->
+			</div>
 		</header>
 	</div>
 	<!-- spacer section -->
@@ -89,7 +104,8 @@
 			<div class="row">
 				<div class="span6 alignright flyLeft">
 					<blockquote class="large">
-					Perseverance is the key to success <cite>unknown</cite>
+						“Everybody should learn to program a computer, because it teaches you how to think.”
+						<cite>Steve Jobs</cite>
 					</blockquote>
 				</div>
 				<div class="span6 aligncenter flyRight">
@@ -100,306 +116,78 @@
 	</section>
 	<!-- end spacer section -->
 	<!-- section: team -->
-	<!--<section id="about" class="section">
+	<section id="about" class="section">
 		<div class="container">
 			<h4>Who We Are</h4>
 			<div class="row">
-				<div class="span5 offset1">
+				<div class="span4 offset1">
 					<div>
-						<h2><strong>Happy </strong>to help someone in<strong> need</strong></h2>
+						<h2>Make coding as your<strong> Passion</strong></h2>
 						<p>
-							
+						<q>Programming is not a zero-sum game. Teaching something to a fellow programmer doesn't take it away from you. I'm happy to share what I can, because I'm in it for the love of programming.</q><strong>-Jhon Caramack</strong></br></br>
+						We know you want to be good at coding. Here we have C programming which will also be your foundations for learning any other programming 
+						languages in the future. I hope you enjoy being here and we are also glad to welcome you.
+																												<strong><cite>-Team Developer</cite></strong>
 						</p>
 					</div>
 				</div>
-				<!--<div class="span6">
+				<div class="span6">
 					<div class="aligncenter">
-						<img src="img/icons/creativity.png" alt="" />
+						<img src="assets/img/icons/laptop.png" alt="" />
 					</div>
 				</div>
 			</div>
-			
-			
-			<div class="row">
-				<div class="span2 offset1 flyIn">
-					<div class="people">
-						<img class="team-thumb img-circle" src="img/team/img-1.jpg" alt="" />
-						<h3>John Doe</h3>
-						<p>
-							Art director
-						</p>
-					</div>
-				</div>
-				<div class="span2 flyIn">
-					<div class="people">
-						<img class="team-thumb img-circle" src="img/team/img-2.jpg" alt="" />
-						<h3>Mike Doe</h3>
-						<p>
-							Web developer
-						</p>
-					</div>
-				</div>
-				<div class="span2 flyIn">
-					<div class="people">
-						<img class="team-thumb img-circle" src="img/team/img-3.jpg" alt="" />
-						<h3>Neil Doe</h3>
-						<p>
-							Web designer
-						</p>
-					</div>
-				</div>
-				<div class="span2 flyIn">
-					<div class="people">
-						<img class="team-thumb img-circle" src="img/team/img-4.jpg" alt="" />
-						<h3>Mark Joe</h3>
-						<p>
-							UI designer
-						</p>
-					</div>
-				</div>
-				<div class="span2 flyIn">
-					<div class="people">
-						<img class="team-thumb img-circle" src="img/team/img-5.jpg" alt="" />
-						<h3>Stephen B</h3>
-						<p>
-							Digital imaging
-						</p>
-					</div>
-				</div>
-			</div>
-			
 			
 		</div>
-		
-	</section>-->
+		<!-- /.container -->
+	</section>
 	<!-- end section: team -->
 	<!-- section: services -->
+	
+	
 	<section id="services" class="section orange">
 		<div class="container">
 			<h4>Courses</h4>
 			<!-- Four columns -->
 			<div class="row">
-				<div class="span6 animated-fast flyIn">
+				<div class="span3 animated-fast flyIn">
 					<div class="service-box">
-						<img src="assets/img/icons/images.png" alt="image if letter C" />
-						<h2><a href="CONTENTSSHOW.html">C tutorial</a></h2>
+						<img src="assets/img/icons/laptop.png" alt="Web development logo" onclick="alert('This content is not available yet.')" />
+						<h2>Web development</h2>
 						<p>
-							C programming is considered as the base for other programming languages, that is why it is known as mother of all modern programming languages. This is a good starting point to start your career in becoming an expert in programming.
+							It's one of the popular job. There are two aspects of web development that will be common for all jobs: frontend and backend. Some jobs may require full-stack skills, but full-stack is merely a combination of frontend and backend. </br>
+							<b style="font-size:25px">Coming Soon</style></b>
+						
+						</p>
+					</div>
+				</div>
+				
+				<div class="span3 animated-fast flyIn">
+					<div class="service-box">
+					<a href="CONTENTSSHOW.html"><img src="assets/img/icons/c_cat.png" alt="C logo" />
+						<h2>C programming</h2></a>
+						<p>
+							Programming is an important skill. C language is known to be the mother of all languages. It is the the most basic programming language and you will find other languages easy to learn once you understand.
 						</p>
 					</div>
 				</div>
 				
 			</div>
+			
 		</div>
-	</section>
-	<!-- end section: services -->
-	<!-- section: works -->
+	</section><!--closing courses-->
+	
 
-	<!--<section id="works" class="section">
-		<div class="container clearfix">
-			<h4>Courses</h4>
-		
-			<div class="row">
-				<div id="filters" class="span12">
-					<ul class="clearfix">
-						<li>
-							<a href="#" data-filter="*" class="active">
-								<h5>All</h5>
-							</a>
-						</li>
-						<li>
-							<a href="#" data-filter=".C">
-								<h5>C</h5>
-							</a>
-						</li>
-					<!--	<li>
-							<a href="#" data-filter=".print">
-								<h5>Print</h5>
-							</a>
-						</li>
-						<li>
-							<a href="#" data-filter=".design">
-								<h5>Design</h5>
-							</a>
-						</li>
-						<li>
-							<a href="#" data-filter=".photography">
-								<h5>Photography</h5>
-							</a>
-						</li>
-					</ul>
-				</div>
-			
-			</div>
-			<div class="row">
-				<div class="span12">
-					<div id="portfolio-wrap">
-					
-						<div class="portfolio-item grid C">
-							<div class="portfolio">
-								<a href="img/works/c_cat.png" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
-						<img src="img/works/c_cat.png" alt="" />
-						<div class="portfolio-overlay">
-							<div class="thumb-info">
-								<h5>Learn C</h5>
-								<i class="icon-plus icon-2x"></i>
-							</div>
-						</div>
-						</a>
-							</div>
-						</div>
-					
-						<div class="portfolio-item grid print design web">
-							<div class="portfolio">
-								<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
-						<img src="img/works/2.png" alt="" />
-						<div class="portfolio-overlay">
-							<div class="thumb-info">
-								<h5>Portfolio name</h5>
-								<i class="icon-plus icon-2x"></i>
-							</div>
-						</div>
-						</a>
-							</div>
-						</div>
-					
-						<div class="portfolio-item grid print design">
-							<div class="portfolio">
-								<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
-						<img src="img/works/3.png" alt="" />
-						<div class="portfolio-overlay">
-							<div class="thumb-info">
-								<h5>Portfolio name</h5>
-								<i class="icon-plus icon-2x"></i>
-							</div>
-						</div>
-						</a>
-							</div>
-						</div>
-					
-						<div class="portfolio-item grid photography web">
-							<div class="portfolio">
-								<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
-						<img src="img/works/4.png" alt="" />
-						<div class="portfolio-overlay">
-							<div class="thumb-info">
-								<h5>Portfolio name</h5>
-								<i class="icon-plus icon-2x"></i>
-							</div>
-						</div>
-						</a>
-							</div>
-						</div>
-						
-						<div class="portfolio-item grid photography web">
-							<div class="portfolio">
-								<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
-						<img src="img/works/5.png" alt="" />
-						<div class="portfolio-overlay">
-							<div class="thumb-info">
-								<h5>Portfolio name</h5>
-								<i class="icon-plus icon-2x"></i>
-							</div>
-						</div>
-						</a>
-							</div>
-						</div>
-				
-						<div class="portfolio-item grid photography web">
-							<div class="portfolio">
-								<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
-						<img src="img/works/6.png" alt="" />
-						<div class="portfolio-overlay">
-							<div class="thumb-info">
-								<h5>Portfolio name</h5>
-								<i class="icon-plus icon-2x"></i>
-							</div>
-						</div>
-						</a>
-							</div>
-						</div>
+	<!-- section: works -->
 	
-						<div class="portfolio-item grid photography web">
-							<div class="portfolio">
-								<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
-						<img src="img/works/7.png" alt="" />
-						<div class="portfolio-overlay">
-							<div class="thumb-info">
-								<h5>Portfolio name</h5>
-								<i class="icon-plus icon-2x"></i>
-							</div>
-						</div>
-						</a>
-							</div>
-						</div>
-					
-						<div class="portfolio-item grid photography">
-							<div class="portfolio">
-								<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
-						<img src="img/works/8.png" alt="" />
-						<div class="portfolio-overlay">
-							<div class="thumb-info">
-								<h5>Portfolio name</h5>
-								<i class="icon-plus icon-2x"></i>
-							</div>
-						</div>
-						</a>
-							</div>
-						</div>
-				
-						<div class="portfolio-item grid photography web">
-							<div class="portfolio">
-								<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
-						<img src="img/works/9.png" alt="" />
-						<div class="portfolio-overlay">
-							<div class="thumb-info">
-								<h5>Portfolio name</h5>
-								<i class="icon-plus icon-2x"></i>
-							</div>
-						</div>
-						</a>
-							</div>
-						</div>
-					
-						<div class="portfolio-item grid design web">
-							<div class="portfolio">
-								<a href="img/works/big.jpg" data-pretty="prettyPhoto[gallery1]" class="portfolio-image">
-						<img src="img/works/10.png" alt="" />
-						<div class="portfolio-overlay">
-							<div class="thumb-info">
-								<h5>Portfolio name</h5>
-								<i class="icon-plus icon-2x"></i>
-							</div>
-						</div>
-						</a>
-							</div>
-						</div>
-			
-					</div>
-				</div>
-			</div>
-		</div>-->
-	
-	
-	</section>
 	<!-- spacer section -->
-	<section class="spacer bg3">
-		<div class="container">
-			<div class="row">
-				<div class="span10 aligncenter flyLeft">
-					<blockquote class="large">
-						Programming is not a zero-sum game. Teaching something to a fellow programmer doesn't take it away from you. I'm happy to share what I can, because I'm in it for the love of programming.
-					</blockquote><cite><strong>Jhon Caramack</strong></cite>
-					
-					
-				</div>
-			
-			</div>
-		</div>
-	</section>
 	
-	<!--<section id="blog" class="section">
-		
+	<!-- end spacer section -->
+	<!-- section: blog -->
+	<section id="blog" class="section">
+		<div class="container">
+			<h4>Our Blog</h4>
+			<!-- Three columns -->
 			<div class="row">
 				<div class="span3">
 					<div class="home-post">
@@ -408,13 +196,13 @@
 						</div>
 						<div class="post-meta">
 							<i class="icon-file icon-2x"></i>
-							<span class="date">June 19, 2013</span>
-							<span class="tags"><a href="#">Design</a>, <a href="#">Blog</a></span>
+							<span class="date">May 25, 2019</span>
+							<span class="tags"><a href="#">Programming</a>, <a href="#">Blog</a></span>
 						</div>
 						<div class="entry-content">
-							<h5><strong><a href="#">New design trends</a></strong></h5>
+							<h5><strong><a href="#">C programming</a></strong></h5>
 							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
+								Why learn C programming? . &hellip;
 							</p>
 							<a href="#" class="more">Read more</a>
 						</div>
@@ -427,71 +215,35 @@
 						</div>
 						<div class="post-meta">
 							<i class="icon-file icon-2x"></i>
-							<span class="date">June 19, 2013</span>
-							<span class="tags"><a href="#">Design</a>, <a href="#">News</a></span>
+							<span class="date">May 24, 2019</span>
+							<span class="tags"><a href="#">Design</a>, <a href="#">Blog</a></span>
 						</div>
 						<div class="entry-content">
-							<h5><strong><a href="#">Retro is great</a></strong></h5>
+							<h5><strong><a href="#">New 3D CSS effects</a></strong></h5>
 							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
+							CSS is a great way to create animation effects on objects. It grasps the attention
+							of the user. &hellip;
 							</p>
 							<a href="#" class="more">Read more</a>
 						</div>
 					</div>
 				</div>
-				<div class="span3">
-					<div class="home-post">
-						<div class="post-image">
-							<img class="max-img" src="img/blog/img3.jpg" alt="" />
-						</div>
-						<div class="post-meta">
-							<i class="icon-file icon-2x"></i>
-							<span class="date">June 22, 2013</span>
-							<span class="tags"><a href="#">Design</a>, <a href="#">Tips</a></span>
-						</div>
-						<div class="entry-content">
-							<h5><strong><a href="#">Isometric mockup</a></strong></h5>
-							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
-							</p>
-							<a href="#" class="more">Read more</a>
-						</div>
-					</div>
-				</div>
-				<div class="span3">
-					<div class="home-post">
-						<div class="post-image">
-							<img class="max-img" src="img/blog/img4.jpg" alt="" />
-						</div>
-						<div class="post-meta">
-							<i class="icon-file icon-2x"></i>
-							<span class="date">June 27, 2013</span>
-							<span class="tags"><a href="#">News</a>, <a href="#">Tutorial</a></span>
-						</div>
-						<div class="entry-content">
-							<h5><strong><a href="#">Free icon set</a></strong></h5>
-							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. &hellip;
-							</p>
-							<a href="#" class="more">Read more</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="blankdivider30"></div>
+			
+			</div><!--close row for the blog-->
+			<!-- <div class="blankdivider30"></div>
 			<div class="aligncenter">
 				<a href="#" class="btn btn-large btn-theme">More blog post</a>
-			</div>
-		</div>
-	</section>-->
+			</div>-->
+		</div><!--close blog container-->
+	</section><!--close blog section-->
 
-	<!-- end spacer section -->
+
 	<!-- section: contact -->
 	<section id="contact" class="section green">
 		<div class="container">
 			<h4>Get in Touch</h4>
 			<p>
-				<strong>Team will get back to you.</strong>
+			<b> Team will get back to you. If you have any suggestion please feel to write it down below.</b>
 			</p>
 			<div class="blankdivider30">
 			</div>
@@ -515,7 +267,7 @@
 										<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
 										<div class="validation"></div>
 									</div>
-								</div>
+								</div></br>
 								<div class="span6">
 									<div class="field message form-group">
 										<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
@@ -531,28 +283,27 @@
 			</div>
 		</div>
 	</section>
+
+
 	<footer>
-		<!--<div class="container">
+		<div class="container">
 			<div class="row">
 				<div class="span6 offset3">
 					<ul class="social-networks">
-						<li><a href="#"><i class="icon-circled icon-bgdark icon-instagram icon-2x"></i></a></li>
+					<li><a href="#"><i class="icon-circled icon-bgdark icon-instagram icon-2x"></i></a></li>
 						<li><a href="#"><i class="icon-circled icon-bgdark icon-twitter icon-2x"></i></a></li>
+						<!--
 						<li><a href="#"><i class="icon-circled icon-bgdark icon-dribbble icon-2x"></i></a></li>
-						<li><a href="#"><i class="icon-circled icon-bgdark icon-pinterest icon-2x"></i></a></li>
+						<li><a href="#"><i class="icon-circled icon-bgdark icon-pinterest icon-2x"></i></a></li>-->
 					</ul>
 					<p class="copyright">
-				
-						<div class="credits">
-				
-							<a>&copy; CTUTORIAL 2019</a>
-						</div>
+						&copy;<b> C Tutorial 2019.</b>
+						
 					</p>
 				</div>
 			</div>
-		</div> -->
-		
-		
+		</div>
+		<!-- ./container -->
 	</footer>
 	<a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bgdark icon-2x"></i></a>
 	<script src="assets/js/jquery.js"></script>
@@ -564,13 +315,13 @@
 	<script src="assets/js/isotope.js"></script>
 	<script src="assets/js/jquery.flexslider.js"></script>
 	<script src="assets/js/inview.js"></script>
-		<script src="assets/js/custom.js"></script>
-			<script src="assets/contactform/contactform.js"></script>
 	<script src="assets/js/animate.js"></script>
-
-	<script src="assets/js/pen.js"></script>
-
+	<script src="assets/js/custom.js"></script>
+	<script src="assets/contactform/contactform.js"></script>
 
 </body>
 
 </html>
+<?php
+}
+?>

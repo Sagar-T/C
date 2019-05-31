@@ -1,65 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="C TUTORIAL">
-    <meta name="author" content=" http://sagar-t.github.io/C.com">
-    <title>C TUTORIAL</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-		<link href="assets/css/LAYOUTSTYLE.css" rel="stylesheet">
+<html>
+<head>
+<meta charset="utf-8">
+	<title>C Tutorial</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/color/default.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/main.css">
 
-  </head>
-  <body>
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html" id="logo">C TUTORIAL</a>
-        </div>
-		
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Home</a></li>       
-            <li><a href="#about">BASIC CONCEPTS</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">LEARN <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-             	<!--<li class="dropdown-header">BASIC CONCEPTS</li>-->
-                <li><a href="BASICCONTENTS.html" >BASIC OF C LANGUAGE</a></li>
-                <li class="active"><a href="ARRAYFANDSTRUCT.html" >ARRAY, FUNCTIONS AND STRUCTURE</a></li>
-				 <li><a href="ADVANCEDCONCEPTS.html" >ADVANCED CONCEPTS</a></li>
-                <li class="divider"></li>
-              <!-- <li class="dropdown-header"></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>-->
-              </ul>
-            </li>            
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div></br></br>
-	<header>
-  <h2 >ARRAY, FUNCTIONS AND STRUCTURE</h2>
-</header>
+</head>
+<body >
 
-<section>
-  <nav>
-    <ul>
-      <!--<li><a href="#">London</a></li>
-      <li><a href="#">Paris</a></li>
-      <li><a href="#">Tokyo</a></li>-->
-<div class="card card-light">
-<p class="card-heading font-20 roboto"><b>ARRAY, FUNCTIONS AND STRUCTURE</b></p>
-<ul id="counter-list">
+<!-- navbar -->
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<!-- Responsive navbar -->
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+					<h1 class="brand"><a href="index.html">C tutorial</a></h1>
+					<!-- navigation -->
+						<!-- navigation -->
+				<nav class="pull-right nav-collapse collapse">
+						<ul id="menu-main" class="nav">
+					
+							<li><a title="Courses" href="CONTENTSSHOW.html">Courses</a></li>
+							<li><a title="blog" href="#blog">Blog</a></li>
+							<li><a title="Login" href="login.html">Login</a></li>
+							<li><a title="Sign up" href="register.html">Sign up</a></li>
+							
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	  
+	  
+	  <div id="mySidenav" class="sidenav" style="display:none;">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <!--nav bar contents-->
+<p class="card-heading font-20 roboto"><b>Basics of C Language</b></p>
+<ul id="counter-list"
 <li><a href="ARRAYFANDSTRUCT.html" >Arrays</a></li>
 <li><a href="STRINGSANDCHAR.html" >String amd Character Array</a></li>
 <li><a href="STORAGECLASSES.html">Storage Classes</a></li>
@@ -71,11 +59,11 @@
 <li><a href="TYPEDEF.html">Typedef</a></li>
 <li><a href="UNIONSINC.html">Unions</a></li>
 </div>
-    </ul>
-  </nav>
+   <div id="main">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  <article class="article">
   
-  <article>
-<h2>Types of Function calls in C</h2>
+<h2 class="heading">Types of Function calls in C</h2>
 <p>Functions are called by their names, we all know that, then what is this tutorial for? Well if the function does not have any arguments, then to call a function you can directly use its name. But for functions with arguments, we can call a function in two different ways, based on how we specify the arguments, and these two ways are:</p>
 <ol class="content">
 <li>Call by Value</li>
@@ -163,7 +151,7 @@ value of x is 20
 <a href="TYPEOFFUNC.html">&larr; Prev</a>
 </li>
 <li class="next">
-<a href="">Next &rarr;</a>
+<a href="PASSINGARRAYTOFUNC.html">Next &rarr;</a>
 </li>
 </ul></div><hr />
 
@@ -174,18 +162,12 @@ value of x is 20
 	
 
 
-	<footer>
-  <div class="navbar navbar-inverse navbar-fixed-bottom">
-  <div class="container">
-  <div class="navbar-text pull-left">
-  <p style="font-size:30px">&copy; C Tutorial 2019</p>
- 
-  
-</footer>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/main.js"></script>
 
   </body>
