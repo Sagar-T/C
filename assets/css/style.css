@@ -58,16 +58,14 @@ div, article, section, header, footer, nav, li {
 body {
 	background:#fff;
 	color: #444;
-
+	font-size: 16px;
 	font-weight:300;
 	font-family:'Open Sans', Arial, sans-serif;
-	
-  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
-
 }
 
-
+body {
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
 
 ::-moz-selection {
 	color:#333;
@@ -117,20 +115,15 @@ a.scrollup i:hover {
 }
 
 .row {
-	margin-bottom:20px;
-	float:left;
-	
-
+	margin-bottom:30px;
 }
 
 .row .row{
-	margin-bottom:20px;
-	float:left;
+	margin-bottom:30px;
 }
 
 .row.nomargin {
 	margin-bottom:0;
-	
 }
 
 
@@ -196,8 +189,6 @@ a {
 
 a:hover, a:active {
 	text-decoration: underline;
-	color:white;
-	
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
@@ -255,12 +246,6 @@ h2.pagetitle {
 	color:#fff;
 	font-size:46px;
 }
-p.text{
-	
-	padding-top:10px;
-	font-size:25px;
-}
-
 
 /* =========================================================
 03. Misc
@@ -386,7 +371,7 @@ header .logo {
 
 /* --- Header slider --- */
 #header-wrapper.header-slider {
-	background: #444 url(../img/bg/ican.png) no-repeat center center fixed;
+	background: #444 url(../img/bg/coding.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -465,7 +450,7 @@ section.section {
 section.section h4 {
 	text-align: center;
 	margin-bottom: 40px;
-	font-size: 30px;
+	font-size: 46px;
 	font-weight: 700;
 	letter-spacing: -1px;
 }
@@ -513,8 +498,7 @@ section.spacer.bg2 {
 }
 
 section.spacer.bg3 {
-	/*background: url(../img/bg/bg-1.jpg) 50% 0 no-repeat fixed;*/
-	background-color:#555;
+	background: url(../img/bg/bg-3.jpg) 50% 0 no-repeat fixed;
 	width:100%;
 	height:auto;
 	margin:0;	
@@ -531,9 +515,9 @@ section.spacer blockquote cite {
 
 
 
-/* === section courses  === */
+/* === section works === */
 
-#courses  h4 {
+#works h4 {
 	margin-bottom:20px;
 }
 
@@ -742,7 +726,7 @@ section.spacer blockquote cite {
 /* === section services === */
 
 section#services h2 {
-	font-size: 25px;
+	font-size: 22px;
 	margin-bottom: 15px;
 	margin-top: 10px;
 	text-align:center;
@@ -754,7 +738,7 @@ section#services p {
 
 section#services .service-box {
 	text-align: center;
-	padding: 5px;
+	padding: 20px;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -1027,7 +1011,7 @@ div.cform-response-output {
 06. Footer
 ============================================================ */
 
-/*footer {
+footer {
 	background: #2b2b2b;
 	text-align: center;
 	color: #ddd;
@@ -1042,24 +1026,24 @@ footer a:hover {
     color: #fff;
 }
 
-footer ul.social-netcourses  {
+footer ul.social-networks {
 	list-style:none;
 }
 
-footer ul.social-netcourses  li {
+footer ul.social-networks li {
 	display:inline;
 }
 
-footer ul.social-netcourses  li i {
+footer ul.social-networks li i {
 	display:inline-block;
 }
 
-footer ul.social-netcourses  li a {
+footer ul.social-networks li a {
 	color: #5e5e5e;
 	margin: 0 5px;
 }
 
-footer ul.social-netcourses  li a:hover {
+footer ul.social-networks li a:hover {
 	text-decoration:none;
 	-webkit-transition: all 0.4s ease-in-out;
 	-moz-transition: all 0.4s ease-in-out;
@@ -1068,26 +1052,26 @@ footer ul.social-netcourses  li a:hover {
 	transition: all 0.4s ease-in-out;
 }
 
-footer ul.social-netcourses  li i.icon-bgdark {
+footer ul.social-networks li i.icon-bgdark {
 	background:#414141;
 	color: #656565;
 }
 
 
-footer ul.social-netcourses  li a i.icon-instagram:hover {
+footer ul.social-networks li a i.icon-instagram:hover {
 	background: #ba7b3d;
 	color: #fff;
 }
 
-footer ul.social-netcourses  li a i.icon-twitter:hover {
+footer ul.social-networks li a i.icon-twitter:hover {
 	background: #5ad2eb;
 	color: #fff;
 }
-footer ul.social-netcourses  li a i.icon-dribbble:hover {
+footer ul.social-networks li a i.icon-dribbble:hover {
 	background: #f57b71;
 	color: #fff;
 }
-footer ul.social-netcourses  li a i.icon-pinterest:hover {
+footer ul.social-networks li a i.icon-pinterest:hover {
 	background: #d84848;
 	color: #fff;
 }
@@ -1095,8 +1079,11 @@ footer ul.social-netcourses  li a i.icon-pinterest:hover {
 
 
 
+/* =========================================================
+07. Icons
+============================================================ */
 
-
+/* bg */
 i.icon-bglight {
 	color: #444;
 	background: #f7f7f7;
@@ -1122,6 +1109,7 @@ i.icon-bgdark.active:hover {
 	background: #333;
 }
 
+/* square */
 i.icon-square {
 	display: inline-block;
 	text-align: center;
@@ -1150,7 +1138,7 @@ i.icon-square.icon-5x{
 	line-height: 120px !important;
 }
 
-
+/* rounded */
 i.icon-rounded {
 	display: inline-block;
 	border-radius: 6px !important;
@@ -1201,7 +1189,7 @@ i.icon-rounded {
 }
 
 
-
+/* circled */
 i.icon-circled {
 	display: inline-block;
 	border-radius: 1000px !important;
@@ -1241,7 +1229,7 @@ i.icon-white {
 }
 
 
-
+/* more icon sizes for font-awesome icons */
 
 .icon-6x {
   font-size: 6em;
@@ -1290,7 +1278,9 @@ i.icon-white {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
-}*/
+}
+
+
 
 /* =========================================================
 08. Buttons
@@ -1670,7 +1660,7 @@ i.icon-white {
  padding: 1em 0;
 }
 
- #courses  .container {
+ #works .container {
  top: 0 !important;
 }
 
